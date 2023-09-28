@@ -1,6 +1,24 @@
+![Coalfire](coalfire_logo.png)
+
+
 # Google Cloud Network Terraform Module
 
-This module makes it easy to set up a new VPC Network in GCP by defining your network and subnet ranges in a concise syntax.
+## Description
+
+This module makes it easy to set up a new VPC Network in GCP by defining your network and subnet ranges in a concise syntax. Coalfire has tested this module with Terraform version 1.5.0 and the Hashicorp Google provider versions 4.70 - 5.0.
+
+FedRAMP Compliance: Moderate, High
+
+## Resource List
+
+The resources/services/activations/deletions that this module will create/trigger are:
+
+- Shared VPC Network
+- Subnets
+- Routing
+- Firewall rules
+- Network peering
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
