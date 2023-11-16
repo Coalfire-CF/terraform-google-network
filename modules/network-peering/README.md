@@ -27,6 +27,24 @@ The resources created/managed by this module are:
 
 No modules.
 
+## Usage
+
+```hcl
+module "network-peering" {
+  source = "github.com/Coalfire-CF/terraform-google-network/modules/network-peering"
+
+  prefix        = "sandbox1-to-sandbox2"
+  local_network = "projects/XXXXXX/global/networks/sandbox1"
+  peer_network  = "projects/XXXXXX/global/networks/sandbox2"
+
+  export_local_subnet_routes_with_public_ip = true
+  export_local_custom_routes                = false
+  export_peer_custom_routes                 = false
+  export_peer_subnet_routes_with_public_ip  = false
+
+}
+```
+
 ## Resources
 
 | Name | Type |

@@ -19,6 +19,36 @@ This module allows creation of custom VPC firewall rules.
 
 No modules.
 
+## Usage
+
+```hcl
+module "firewall-rules" {
+  source = "github.com/Coalfire-CF/terraform-google-network/modules/firewall-rules"
+
+  network_name = var.network_name
+  project_id   = var.project_id
+
+  rules = [{
+    name        = "allow-ssh-ingress"
+    description = "allow-ssh-ingress"
+    direction   = "INGRESS"
+    priority    = 1000
+    ranges                  = ["10.0.0.0/8"]
+    source_tags             = null
+    source_service_accounts = null
+    target_tags             = null
+    target_service_accounts = null
+    allow = [{
+      protocol = "tcp"
+      ports    = ["22"]
+    }]
+    deny = []
+    log_config = {
+      metadata = "INCLUDE_ALL_METADATA"
+    }
+  }]
+}
+```
 ## Resources
 
 | Name | Type |
