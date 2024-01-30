@@ -2,7 +2,7 @@
 
 This module allows creation of custom VPC firewall rules.
 
-## Usage Example
+Usage Example
 
 ```hcl
 module "firewall-rules" {
