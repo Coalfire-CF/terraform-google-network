@@ -6,6 +6,23 @@ It supports creating:
 
 - A VPC Network
 - Optionally enabling the network as a Shared VPC host
+
+## Usage Example
+
+```hcl
+module "vpc" {
+  source = "github.com/Coalfire-CF/terraform-google-network/modules/vpc"
+  auto_create_subnetworks                = false
+  delete_default_internet_gateway_routes = false
+  description                            = "Sandbox VPC"
+  mtu                                    = 1460
+  network_name                           = var.network_name
+  project_id                             = var.project_id
+  routing_mode                           = "GLOBAL"
+  shared_vpc_host                        = false
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
