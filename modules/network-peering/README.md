@@ -6,6 +6,22 @@ The resources created/managed by this module are:
 
 - one network peering from `local network` to `peer network`, which will be named `<prefix>-<local network name>-<peer network name>`
 - one network peering from `peer network` to `local network`, which will be named `<prefix>-<peer network name>-<local network name>`
+
+## Usage Example
+
+```hcl
+module "network-peering" {
+  source = "github.com/Coalfire-CF/terraform-google-network/modules/network-peering"
+  prefix        = "sandbox1-to-sandbox2"
+  local_network = "projects/XXXXXX/global/networks/sandbox1"
+  peer_network  = "projects/XXXXXX/global/networks/sandbox2"
+  export_local_subnet_routes_with_public_ip = true
+  export_local_custom_routes                = false
+  export_peer_custom_routes                 = false
+  export_peer_subnet_routes_with_public_ip  = false
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

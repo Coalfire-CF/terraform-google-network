@@ -5,6 +5,43 @@ This submodule creates the individual vpc subnets.
 It supports creating:
 
 - Subnets within vpc network.
+
+## Usage Example
+
+```hcl
+module "subnets" {
+  source = "github.com/Coalfire-CF/terraform-google-network/modules/subnets"
+  network_name = var.network_name
+  project_id   = var.project_id
+  subnets = [
+    {
+      subnet_name           = "gke-subnet"
+      subnet_ip             = "10.10.40.0/24"
+      subnet_region         = var.gcp_region
+      subnet_private_access = true
+    },
+    {
+      subnet_name           = "private-subnet"
+      subnet_ip             = "10.10.20.0/24"
+      subnet_region         = var.gcp_region
+      subnet_private_access = true
+    }
+  ]
+  secondary_ranges = {
+    gke-subnet = [
+      {
+        range_name    = "us-east4-gke-01-services"
+        ip_cidr_range = "192.50.0.0/16"
+      },
+      {
+        range_name    = "us-east4--gke-01-pods"
+        ip_cidr_range = "192.60.0.0/16"
+      }
+    ]
+  }
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
