@@ -29,7 +29,7 @@ module "firewall-rules" {
     }
   }]
 }
-
+```
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
