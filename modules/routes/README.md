@@ -6,6 +6,26 @@ It supports creating:
 
 - Routes within vpc network.
 - Optionally deletes the default internet gateway routes.
+
+## Usage Example
+
+```hcl
+module "routes" {
+  source = "github.com/Coalfire-CF/terraform-google-network/modules/routes"
+  network_name = var.network_name
+  project_id   = var.project_id
+  routes = [
+    {
+      name              = "route1"
+      description       = "route1"
+      destination_range = "10.0.0.0/16"
+      priority          = "1000"
+      next_hop_ip       = "10.10.20.12"
+    }
+  ]
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
