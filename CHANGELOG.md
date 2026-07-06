@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Coalfire-CF/terraform-google-network/compare/v1.1.0...v1.1.1) (2026-07-06)
+
+
+### Miscellaneous
+
+* **deps:** bump actions/github-script from 8 to 9 ([#44](https://github.com/Coalfire-CF/terraform-google-network/issues/44)) ([14be572](https://github.com/Coalfire-CF/terraform-google-network/commit/14be57297e2e80689c2de9b2c81a2fa60dde510f))
+
 ## [1.1.0](https://github.com/Coalfire-CF/terraform-google-network/compare/v1.0.8...v1.1.0) (2026-07-05)
 
 
