@@ -94,3 +94,43 @@ No resources.
 | <a name="output_subnets_secondary_ranges"></a> [subnets\_secondary\_ranges](#output\_subnets\_secondary\_ranges) | The secondary ranges associated with these subnets |
 | <a name="output_subnets_self_links"></a> [subnets\_self\_links](#output\_subnets\_self\_links) | The self-links of subnets being created |
 <!-- END_TF_DOCS -->
+## Tree
+
+```text
+.
+|-- CHANGELOG.md
+|-- CONTRIBUTING.md
+|-- LICENSE
+|-- README.md
+|-- coalfire_logo.png
+|-- main.tf
+|-- modules
+|   |-- firewall-rules
+|   |   |-- README.md
+|   |   |-- main.tf
+|   |   |-- outputs.tf
+|   |   |-- variables.tf
+|   |-- network-peering
+|   |   |-- README.md
+|   |   |-- main.tf
+|   |   |-- outputs.tf
+|   |   |-- variables.tf
+|   |-- routes
+|   |   |-- README.md
+|   |   |-- main.tf
+|   |   |-- outputs.tf
+|   |   |-- variables.tf
+|   |-- subnets
+|   |   |-- README.md
+|   |   |-- main.tf
+|   |   |-- outputs.tf
+|   |   |-- variables.tf
+|   |-- vpc
+|       |-- README.md
+|       |-- main.tf
+|       |-- outputs.tf
+|       |-- variables.tf
+|-- outputs.tf
+|-- release-please-config.json
+|-- variables.tf
+```
