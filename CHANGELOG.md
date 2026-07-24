@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.2](https://github.com/Coalfire-CF/terraform-google-network/compare/v1.1.1...v1.1.2) (2026-07-24)
+
+
+### Bug Fixes
+
+* **release:** pass secrets to org-release (App token for release-please) ([#48](https://github.com/Coalfire-CF/terraform-google-network/issues/48)) ([58f927e](https://github.com/Coalfire-CF/terraform-google-network/commit/58f927ef9690b9861c4b9dbaeb281468099273f3))
+
+
+### Miscellaneous
+
+* adopt Actions v0.12.1 (bypass auto-merge + event-driven re-merge) ([c445b74](https://github.com/Coalfire-CF/terraform-google-network/commit/c445b7480e442645326ad3bdacc036de50f1b98a))
+* **ci:** adopt Coalfire-CF/Actions v0.11.3 ([#46](https://github.com/Coalfire-CF/terraform-google-network/issues/46)) ([32fb33c](https://github.com/Coalfire-CF/terraform-google-network/commit/32fb33cf524ed56cb6364071d5af2a5a09d53a39))
+* **deps:** bump the org-actions group with 10 updates ([#49](https://github.com/Coalfire-CF/terraform-google-network/issues/49)) ([4d11a6c](https://github.com/Coalfire-CF/terraform-google-network/commit/4d11a6cac5ed0e6a8124b1c703208f39ec5a5b2f))
+* **deps:** bump the org-actions group with 10 updates ([#50](https://github.com/Coalfire-CF/terraform-google-network/issues/50)) ([bf1e2bc](https://github.com/Coalfire-CF/terraform-google-network/commit/bf1e2bc1f0a6860ce2aab915b345c2416fede8be))
+* **deps:** bump the org-actions group with 10 updates ([#51](https://github.com/Coalfire-CF/terraform-google-network/issues/51)) ([b66e6f0](https://github.com/Coalfire-CF/terraform-google-network/commit/b66e6f07b8801e75e0f9536bbfe9f414d9595e07))
+* **deps:** bump the org-actions group with 10 updates ([#52](https://github.com/Coalfire-CF/terraform-google-network/issues/52)) ([3f2a765](https://github.com/Coalfire-CF/terraform-google-network/commit/3f2a765dfea5300f8759ca50ec7a7bdbf9099ae4))
+
 ## [1.1.1](https://github.com/Coalfire-CF/terraform-google-network/compare/v1.1.0...v1.1.1) (2026-07-06)
 
 
