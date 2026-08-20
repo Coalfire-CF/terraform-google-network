@@ -24,7 +24,13 @@ updates:
         exclude-patterns: ["Coalfire-CF/*"]
         update-types: ["minor", "patch"]
   - package-ecosystem: "terraform"
-    directory: "/"
+    directories:
+      - "/"
+      - "/modules/firewall-rules"
+      - "/modules/network-peering"
+      - "/modules/routes"
+      - "/modules/subnets"
+      - "/modules/vpc"
     schedule:
       interval: "daily"
       time: "07:43"
@@ -33,53 +39,12 @@ updates:
       include: "scope"
     labels:
       - "dep/terraform-module"
-  - package-ecosystem: "terraform"
-    directory: "/modules/firewall-rules"
-    schedule:
-      interval: "daily"
-      time: "07:43"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    labels:
-      - "dep/terraform-module"
-  - package-ecosystem: "terraform"
-    directory: "/modules/network-peering"
-    schedule:
-      interval: "daily"
-      time: "07:43"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    labels:
-      - "dep/terraform-module"
-  - package-ecosystem: "terraform"
-    directory: "/modules/routes"
-    schedule:
-      interval: "daily"
-      time: "07:43"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    labels:
-      - "dep/terraform-module"
-  - package-ecosystem: "terraform"
-    directory: "/modules/subnets"
-    schedule:
-      interval: "daily"
-      time: "07:43"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    labels:
-      - "dep/terraform-module"
-  - package-ecosystem: "terraform"
-    directory: "/modules/vpc"
-    schedule:
-      interval: "daily"
-      time: "07:43"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    labels:
-      - "dep/terraform-module"
+    groups:
+      terraform:
+        applies-to: version-updates
+        group-by: dependency-name
+        patterns: ["*"]
+      terraform-security:
+        applies-to: security-updates
+        group-by: dependency-name
+        patterns: ["*"]
