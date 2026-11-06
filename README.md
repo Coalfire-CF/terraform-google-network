@@ -6,7 +6,8 @@
 
 ## Description
 
-This module makes it easy to set up a new VPC Network in GCP by defining your network and subnet ranges in a concise syntax. This module will create:
+This module makes it easy to set up a new VPC Network in GCP by defining your network and subnet ranges in a concise
+syntax. This module will create:
 
 - Shared VPC Network
 - Subnets
